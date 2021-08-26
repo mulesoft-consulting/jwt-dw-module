@@ -13,10 +13,10 @@ fun alg(algorithm: String) : String | Null =
     algMapping[algorithm] default fail('Invalid algorithm provided for signing')
 
 fun cleanKey(key: String) : String =
-    key replace "\n" with "" replace /(-+)(BEGIN|END)(\sRSA)? (PRIVATE|PUBLIC) KEY(-+)/ with "" replace " " with ""
+    log(key replace "\n" with "" replace /(-+)(BEGIN|END)(\sRSA)? (PRIVATE|PUBLIC) KEY(-+)/ with "" replace " " with "")
 
 fun signJWT(jwt: String, privateKey: String, algorithm: String) : String =
-    RSAHelper::signString(jwt, cleanKey(privateKey), algorithm)
+    RSAHelper::signString(jwt, privateKey, algorithm)
 
 /** JWT with header, payload, and signature by specific algorithm. valid algorithms dictated by HMACWith */
 fun JWT(header: Object, payload: Object, pkcs8privateKey: String, algorithm: String) : String = do {
