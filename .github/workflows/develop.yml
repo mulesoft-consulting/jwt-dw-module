@@ -2,8 +2,8 @@ name: Unit Test Module
 on:
   workflow_dispatch:
   push:
-    branches:
-      - develop
+    branches-ignore:
+      - master
     paths-ignore:
       - .github/
       - .maven/
