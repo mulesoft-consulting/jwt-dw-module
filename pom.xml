@@ -94,7 +94,10 @@
             <id>mule-releases</id>
             <url>https://repository-master.mulesoft.org/nexus/content/repositories/releases</url>
         </repository>
-
+        <repository>
+            <id>mule-public</id>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
+        </repository>
         <repository>
             <id>mule-snapshots</id>
             <url>https://repository-master.mulesoft.org/nexus/content/repositories/snapshots</url>
@@ -108,6 +111,10 @@
         <pluginRepository>
             <id>mule-snapshots</id>
             <url>https://repository-master.mulesoft.org/nexus/content/repositories/snapshots</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mule-public</id>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
