@@ -83,13 +83,10 @@
             <id>mule-releases</id>
             <url>https://repository-master.mulesoft.org/nexus/content/repositories/releases</url>
         </repository>
-<<<<<<< HEAD
-=======
         <repository>
             <id>mule-public</id>
             <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
         </repository>
->>>>>>> 7230d706ce1c1cb80f88145beea1b646f525ecd3
         <repository>
             <id>mule-snapshots</id>
             <url>https://repository-master.mulesoft.org/nexus/content/repositories/snapshots</url>
