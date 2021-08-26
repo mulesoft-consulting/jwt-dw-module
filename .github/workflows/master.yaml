@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: mule-artifact
-          path: main/target/*.jar
+          path: target/*.jar

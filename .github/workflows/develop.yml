@@ -1,0 +1,25 @@
+name: Unit Test Module
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+    paths-ignore:
+      - .github/
+      - .maven/
+      - .gitignore
+      - README.md
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Java SDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+      - name: Test
+        run: mvn --batch-mode test
