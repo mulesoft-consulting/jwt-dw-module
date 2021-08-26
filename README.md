@@ -47,3 +47,28 @@ HMAC::JWT({
             "lastName": "Jones"
           }, "Mulesoft123!")
 ```
+
+# jwt::HMAC Functions
+
+## Valid Algorithms
+
+- HS256
+- HS384
+- HS512
+
+## *NOTE: Header `typ` and `alg` keys will be added/overriden automatically* 
+
+### JWT(header: Object, payload: Object, signingKey: String, algorithm: String): String
+
+Returns a signed JSON web token with the specified `header` and `payload` (body), signed using `signingKey` and algorithm specified by `algorith`.
+__________________________________________
+
+### _JWT(header: Object, payload: Object, signingKey: String): String_
+
+Returns a signed JSON web token with the specified `header` and `payload` (body), signed using `signingKey` via the HMAC-SHA256 (HS256) algorithm.
+__________________________________________
+
+### _JWT(payload: Object, signingKey: String): String_
+
+Returns a signed JSON web token with the specified `payload` (body), signed using `signingKey` via the HMAC-SHA256 (HS256) algorithm. Header is defaulted as `{ "alg": "HS256", "typ": "JWT" }`
+__________________________________________
