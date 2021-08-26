@@ -3,7 +3,8 @@ name: Publish GitHub Package
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches:
+      - master
     paths-ignore:
       - .github/
       - .maven/
