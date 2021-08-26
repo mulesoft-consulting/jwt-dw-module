@@ -1,3 +1,5 @@
+[![Publish GitHub Package](https://github.com/mulesoft-consulting/jwt-dw-module/actions/workflows/master.yaml/badge.svg)](https://github.com/mulesoft-consulting/jwt-dw-module/actions/workflows/master.yaml) [![Unit Test Module](https://github.com/mulesoft-consulting/jwt-dw-module/actions/workflows/develop.yml/badge.svg)](https://github.com/mulesoft-consulting/jwt-dw-module/actions/workflows/develop.yml)
+
 # DataWeave JWT Module
 
 This module provides functionality to create signed JSON Web Tokens. The following formats are currently support:
