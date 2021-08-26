@@ -11,6 +11,8 @@ This module provides functionality to create signed JSON Web Tokens. The followi
 * RS384
 * RS512
 
+RSA private keys must be in PKCS#1 or PKCS#8 format.
+
 Example RSA usage:
 
 ```dataweave
@@ -19,7 +21,7 @@ output application/java
 import jwt::RSA
 ---
 {
-	token: RSA::PKCS8JWT(
+	token: RSA::JWT(
 		{
 			iss: p('google.clientEmail'),
 			aud: 'https://oauth2.googleapis.com/token',
